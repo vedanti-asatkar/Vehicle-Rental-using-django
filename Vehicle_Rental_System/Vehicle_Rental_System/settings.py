@@ -91,19 +91,11 @@ WSGI_APPLICATION = 'Vehicle_Rental_System.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
-=======
-        'NAME': 'cp',  # Corrected DB name from your setup guide
-        'USER': 'root',    # Replace with your MySQL username
-        'PASSWORD': 'vedantiasatkar1523@',  # IMPORTANT: Replace with your actual MySQL password
-        'HOST': 'localhost',          # Or your MySQL server address
-        'PORT': '3306',               # Default MySQL port
->>>>>>> 95b19fba1109557a00be7f13a177d5081bad2746
+'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 
@@ -159,7 +151,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # For developme
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-<<<<<<< HEAD
 # Razorpay Settings
 RAZORPAY_API_KEY = os.getenv('RAZORPAY_API_KEY')
 RAZORPAY_API_SECRET_KEY = os.getenv('RAZORPAY_API_SECRET_KEY')
@@ -173,11 +164,6 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 AUTHENTICATION_BACKENDS = [
-    'rental.backends.ActiveCustomerBackend', # Our custom backend
-    'django.contrib.auth.backends.ModelBackend', # The default backend
+    'rental.backends.ActiveCustomerBackend', # Our custom backend
+    'django.contrib.auth.backends.ModelBackend', # The default backend
 ]
-=======
-# --- Authentication URLs ---
-# Tell Django where to redirect users when they need to log in.
-LOGIN_URL = 'login'
->>>>>>> 95b19fba1109557a00be7f13a177d5081bad2746
